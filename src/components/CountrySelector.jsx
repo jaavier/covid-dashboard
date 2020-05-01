@@ -89,7 +89,7 @@ export default function CountrySelector({ first = false }) {
     <>
       <div className="border rounded-lg shadow-lg pt-3 pb-6 mx-2 mb-6">
         <div className="w-full">
-          <div className="py-2 text-center text-2xl">País</div>
+          <div className="py-2 text-center text-2xl">{first && "Primer" || "Segundo"} País</div>
           <div className="p-2">
             <select
               className="w-full p-2 border border-black"
