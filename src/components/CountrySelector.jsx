@@ -52,9 +52,9 @@ export default function CountrySelector({ first = false }) {
       setResults(data);
 
       for (let result of data) {
-        totalConfirmed = totalConfirmed + result.Confirmed;
-        totalRecovered = totalRecovered + result.Recovered;
-        totalDeaths = totalDeaths + result.Deaths;
+        totalConfirmed = result.Confirmed;
+        totalRecovered = result.Recovered;
+        totalDeaths = result.Deaths;
       }
 
       if (first) {

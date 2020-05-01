@@ -1,6 +1,6 @@
 {
   "name": "covid-dashboard",
-  "homepage":"http://tioprogramador.com/covid-19/comparador-paises/index.html",
+  "homepage":"http://tioprogramador.com/covid-19/comparador-paises/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
