@@ -22,17 +22,17 @@ export default function CountryComparing() {
 
   return (
     <>
-      <div className="flex">
+      <div className="flex mt-1">
         <div className="w-full">
           <div className="px-2 text-center">
             <div className="border py-4 mb-2 rounded-lg">
               <div className="text-2xl">Más confirmados</div>
-              <div className="flex justify-center py-3 font-light">
+              <div className="flex justify-center py-3 font-light px-2">
                 <div className="flex-1">
                   <div>{first || "Seleccionar País"}</div>
                   <div>{firstConfirmed.toLocaleString()}</div>
                 </div>
-                <div className="flex-1">
+                <div className="w-1/4">
                   <div class="text-4xl">
                     {firstConfirmed > secondConfirmed && ">"}
                     {firstConfirmed < secondConfirmed && "<"}

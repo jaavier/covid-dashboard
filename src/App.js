@@ -7,22 +7,22 @@ import { AppProvider } from "./state";
 function App() {
   return (
     <AppProvider>
-    <div className="App">
-      <div className="p-2">
-        <div className="text-2xl">COVID-19 Dashboard</div>
-        <div className="flex w-full">
-          <div className="flex-1">
-            <CountrySelector first={true} />
+      <div className="App">
+        <div className="p-2">
+          <div className="text-2xl">COVID-19 Dashboard</div>
+          <div className="flex">
+            <div class="w-full">
+              <CountrySelector first={true} />
+            </div>
+            <div class="w-full">
+              <CountrySelector first={false} />
+            </div>
           </div>
-          <div className="flex-1">
-            <CountryComparing />
-          </div>
-          <div className="flex-1">
-            <CountrySelector first={false} />
-          </div>
+          <div className="block">
+              <CountryComparing />
+            </div>
         </div>
       </div>
-    </div>
     </AppProvider>
   );
 }
