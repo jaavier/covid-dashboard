@@ -1,6 +1,6 @@
 {
   "name": "covid-dashboard",
-  "homepage":"https://jaavier.github.io/covid-dashboard",
+  "homepage":"https://jaavier.github.io/covid/comparador/index.html",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
