@@ -13,12 +13,12 @@ export default function CountryComparing() {
     secondDeaths,
   } = useContext(AppContext);
 
-  firstConfirmed = parseInt(firstConfirmed || 0).toLocaleString();
-  secondConfirmed = parseInt(secondConfirmed || 0).toLocaleString();
-  firstRecovered = parseInt(firstRecovered || 0).toLocaleString();
-  secondRecovered = parseInt(secondRecovered || 0).toLocaleString();
-  firstDeaths = parseInt(firstDeaths || 0).toLocaleString();
-  secondDeaths = parseInt(secondDeaths || 0).toLocaleString();
+  firstConfirmed = parseInt(firstConfirmed || 0);
+  secondConfirmed = parseInt(secondConfirmed || 0);
+  firstRecovered = parseInt(firstRecovered || 0);
+  secondRecovered = parseInt(secondRecovered || 0);
+  firstDeaths = parseInt(firstDeaths || 0);
+  secondDeaths = parseInt(secondDeaths || 0);
 
   return (
     <>
@@ -30,18 +30,21 @@ export default function CountryComparing() {
               <div className="flex justify-center py-3 font-light">
                 <div className="flex-1">
                   <div>{first || "Seleccionar País"}</div>
-                  <div>{firstConfirmed}</div>
+                  <div>{firstConfirmed.toLocaleString()}</div>
                 </div>
                 <div className="flex-1">
                   <div class="text-4xl">
                     {firstConfirmed > secondConfirmed && ">"}
                     {firstConfirmed < secondConfirmed && "<"}
-                    {firstConfirmed == secondConfirmed && firstConfirmed > 0 && secondConfirmed > 0 && "="}
+                    {firstConfirmed == secondConfirmed &&
+                      firstConfirmed > 0 &&
+                      secondConfirmed > 0 &&
+                      "="}
                   </div>
                 </div>
                 <div className="flex-1">
                   <div>{second || "Seleccionar País"}</div>
-                  <div>{secondConfirmed}</div>
+                  <div>{secondConfirmed.toLocaleString()}</div>
                 </div>
               </div>
             </div>
@@ -50,18 +53,21 @@ export default function CountryComparing() {
               <div className="flex justify-center py-3 font-light">
                 <div className="flex-1">
                   <div>{first || "Seleccionar País"}</div>
-                  <div>{firstRecovered}</div>
+                  <div>{firstRecovered.toLocaleString()}</div>
                 </div>
                 <div className="flex-1">
                   <div class="text-4xl">
                     {firstRecovered > secondRecovered && ">"}
                     {firstRecovered < secondRecovered && "<"}
-                    {firstRecovered == secondRecovered && firstRecovered > 0 && secondRecovered > 0 && "="}
+                    {firstRecovered == secondRecovered &&
+                      firstRecovered > 0 &&
+                      secondRecovered > 0 &&
+                      "="}
                   </div>
                 </div>
                 <div className="flex-1">
                   <div>{second || "Seleccionar País"}</div>
-                  <div>{secondRecovered}</div>
+                  <div>{secondRecovered.toLocaleString()}</div>
                 </div>
               </div>
             </div>
@@ -70,18 +76,21 @@ export default function CountryComparing() {
               <div className="flex justify-center py-3 font-light">
                 <div className="flex-1">
                   <div>{first || "Seleccionar País"}</div>
-                  <div>{firstDeaths}</div>
+                  <div>{firstDeaths.toLocaleString()}</div>
                 </div>
                 <div className="flex-1">
                   <div class="text-4xl">
                     {firstDeaths > secondDeaths && ">"}
                     {firstDeaths < secondDeaths && "<"}
-                    {firstDeaths == secondDeaths && firstDeaths > 0 && secondDeaths > 0 && "="}
+                    {firstDeaths == secondDeaths &&
+                      firstDeaths > 0 &&
+                      secondDeaths > 0 &&
+                      "="}
                   </div>
                 </div>
                 <div className="flex-1">
                   <div>{second || "Seleccionar País"}</div>
-                  <div>{secondDeaths}</div>
+                  <div>{secondDeaths.toLocaleString()}</div>
                 </div>
               </div>
             </div>
