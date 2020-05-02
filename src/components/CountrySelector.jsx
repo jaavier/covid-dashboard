@@ -51,7 +51,7 @@ export default function CountrySelector({ first = false }) {
     if (countrySelected === null) return;
     try {
       let data = await fetch(
-        `https://api.covid19api.com/total/country/${countrySelected}`
+        `https://api.covid19api.com/total/country/${countrySelected}?from=2020-03-01T00:00:00Z&to=2020-04-01T00:00:00Z`
       );
 
       data = await data.json();
@@ -87,7 +87,7 @@ export default function CountrySelector({ first = false }) {
 
   return (
     <>
-      <div className="border rounded-lg shadow-lg pt-3 pb-6 mx-2 mb-6">
+      <div className="border rounded-lg shadow-lg pt-3 pb-6 mb-6">
         <div className="w-full">
           <div className="py-2 text-center text-2xl">{first && "Primer" || "Segundo"} País</div>
           <div className="p-2">

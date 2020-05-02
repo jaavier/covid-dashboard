@@ -1,29 +1,37 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./App.css";
-import CountrySelector from "./components/CountrySelector";
-import CountryComparing from "./components/CountryComparing";
 import { AppProvider } from "./state";
+import Welcome from "./pages/welcome";
+import Compare from "./pages/compare";
+import Summary from "./pages/summary";
+import Navbar from "./components/Navbar";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+// Falta migrar a algún router
 
 function App() {
+  const [page, setPage] = useState("resumen");
+
   return (
-    <AppProvider>
-      <div className="App">
-        <div className="p-2">
-          <div className="text-2xl text-center lg:text-left py-4">COVID-19 Comparador</div>
-          <div className="flex">
-            <div class="w-full">
-              <CountrySelector first={true} />
-            </div>
-            <div class="w-full">
-              <CountrySelector first={false} />
+    <Router>
+      <Switch>
+        <AppProvider>
+          <div className="App">
+            <div className="">
+              <Navbar />
+              <Route path="/chile">
+                <Summary />
+              </Route>
+              <Route path="/comparecountries">
+                <Compare />
+              </Route>
+              <Route path="/">
+                <Welcome />
+              </Route>
             </div>
           </div>
-          <div className="block">
-              <CountryComparing />
-            </div>
-        </div>
-      </div>
-    </AppProvider>
+        </AppProvider>
+      </Switch>
+    </Router>
   );
 }
 
