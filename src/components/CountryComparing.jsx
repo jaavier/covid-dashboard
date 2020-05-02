@@ -94,6 +94,9 @@ export default function CountryComparing() {
                 </div>
               </div>
             </div>
+            <div className="py-4">
+              <a href="https://github.com/jaavier/covid-dashboard">View in GitHub</a>
+            </div>
           </div>
         </div>
       </div>

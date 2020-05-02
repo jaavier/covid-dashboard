@@ -51,7 +51,7 @@ export default function CountrySelector({ first = false }) {
     if (countrySelected === null) return;
     try {
       let data = await fetch(
-        `https://api.covid19api.com/total/country/${countrySelected}`
+        `https://api.covid19api.com/total/country/${countrySelected}?from=2020-03-01T00:00:00Z&to=2020-04-01T00:00:00Z`
       );
 
       data = await data.json();

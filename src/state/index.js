@@ -3,7 +3,6 @@ import React, { createContext, useState } from "react";
 const AppContext = createContext();
 
 function AppProvider({ children }) {
-
   const [information, setInformation] = useState({});
   const [isoCountry, setIsoCountry] = useState({});
 
@@ -19,23 +18,53 @@ function AppProvider({ children }) {
   const [firstDeaths, setFirstDeaths] = useState(0);
   const [secondDeaths, setSecondDeaths] = useState(0);
 
+  // Pacientes críticos
+  const [criticosHoy, setCriticosHoy] = useState(0);
+  const [criticosAyer, setCriticosAyer] = useState(0);
+
+  const [fechaHoy, setFechaHoy] = useState(null);
+  const [fechaAyer, setFechaAyer] = useState(null);
+  // Fin pacientes críticos
+
   return (
     <AppContext.Provider
       value={{
-        information, setInformation,
-        isoCountry, setIsoCountry,
+        information,
+        setInformation,
+        isoCountry,
+        setIsoCountry,
 
-        first, setFirst,
-        second, setSecond,
+        first,
+        setFirst,
+        second,
+        setSecond,
 
-        firstConfirmed, setFirstConfirmed,
-        secondConfirmed, setSecondConfirmed,      
+        firstConfirmed,
+        setFirstConfirmed,
+        secondConfirmed,
+        setSecondConfirmed,
 
-        firstRecovered, setFirstRecovered,
-        secondRecovered, setSecondRecovered,
+        firstRecovered,
+        setFirstRecovered,
+        secondRecovered,
+        setSecondRecovered,
 
-        firstDeaths, setFirstDeaths,
-        secondDeaths, setSecondDeaths
+        firstDeaths,
+        setFirstDeaths,
+        secondDeaths,
+        setSecondDeaths,
+
+        // pacientes críticos
+
+        criticosHoy,
+        setCriticosHoy,
+        criticosAyer,
+        setCriticosAyer,
+
+        fechaHoy,
+        setFechaHoy,
+        fechaAyer,
+        setFechaAyer,
       }}
     >
       {children}
