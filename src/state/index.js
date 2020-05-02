@@ -26,6 +26,7 @@ function AppProvider({ children }) {
   const [fechaAyer, setFechaAyer] = useState(null);
   // Fin pacientes críticos
 
+
   return (
     <AppContext.Provider
       value={{
