@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import { AppProvider } from "./state";
+import Welcome from "./pages/welcome";
 import Compare from "./pages/compare";
 import Summary from "./pages/summary";
 import Navbar from "./components/Navbar";
@@ -22,6 +23,9 @@ function App() {
               </Route>
               <Route path="/comparecountries">
                 <Compare />
+              </Route>
+              <Route path="/">
+                <Welcome />
               </Route>
             </div>
           </div>
